@@ -1,4 +1,5 @@
 Demo iOS Objective-C Bootstrap application.
+Please copy AppDelegate.h, AppDelegate.m, BootLogic.h, BootLogic.m, ConsoleScreen.h, ConsoleScreen.m, MainScreen.h, MainScreen.m to your new project.
 
 This application has a main screen that is UITableViewController. Modify ```mainScreen.menu``` in file BootLogic.m
 
