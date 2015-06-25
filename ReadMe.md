@@ -1,7 +1,6 @@
 Demo iOS Objective-C Bootstrap application.
 
-This application has a main screen that is UITableViewController. Modify 
-BootLogic.m.
+This application has a main screen that is UITableViewController. Modify ```mainScreen.menu``` in file BootLogic.m
 
 ```Objective-C
 + (void) boot: (UIWindow*) window
@@ -27,4 +26,27 @@ BootLogic.m.
     
     window.rootViewController = nav;
 }
+```
+
+if you want to have a terminal like console screen, create ViewController that inherits ConsoleScreen
+```Objective-C
+#import <UIKit/UIKit.h>
+#import "ConsoleScreen.h"
+@interface BasicA : ConsoleScreen
+@end
+```
+
+To output to console screen, use ```[self writeln: @"text"]```
+```Objective-C
+#import "BasicA.h"
+
+@implementation BasicA
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self writeln:@"ABC"];
+    [self writeln:@"DEF"];
+}
+@end
 ```
